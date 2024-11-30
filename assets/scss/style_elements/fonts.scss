@@ -1,10 +1,37 @@
 @font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('../fonts/Garamond/CormorantGaramond-LightItalic.eot');
-  src: url('../fonts/Garamond/CormorantGaramond-LightItalic.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Garamond/CormorantGaramond-LightItalic.woff2') format('woff2'),
-  url('../fonts/Garamond/CormorantGaramond-LightItalic.woff') format('woff'),
-  url('../fonts/Garamond/CormorantGaramond-LightItalic.svg#CormorantGaramond-LightItalic') format('svg');
+  font-family: Inter;
+  src: url('../fonts/Inter_18pt-Light.ttf');
   font-weight: 300;
-  font-style: italic;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/Inter_18pt-Regular.ttf');
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/Inter_18pt-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/Inter_18pt-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/Inter_18pt-Bold.ttf');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat-Regular.ttf');
+  font-weight: 400;
 }

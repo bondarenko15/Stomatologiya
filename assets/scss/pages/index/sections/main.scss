@@ -1,0 +1,107 @@
+.main {
+    position: relative;
+    padding: 100px 0 35px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .main_head {
+            .block_main {
+                p {
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: block;
+                    margin-top: 15px;
+                }
+
+            }
+        }
+    }
+
+    .img_main {
+        width: 100%;
+        min-height: 372px;
+        margin-top: 45px;
+    }
+}
+
+
+
+@media (min-width: 648px) {
+    .main {
+        padding: 100px 0 25px;
+
+        .container {
+            .main_head {
+                .block_main {
+                    p {
+                        font-size: 22px;
+                        margin-top: 25px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .main {
+        padding: 210px 0 70px;
+
+        .container {
+            .main_head {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .block_main {
+                    p {
+                        font-size: 24px;
+                        margin-top: 20px;
+                    }
+
+                }
+            }
+        }
+
+        .img_main {
+            min-height: 495px;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .main {
+        padding: 240px 0 30px;
+
+        .container {
+            .main_head {
+                .block_main {
+                    p {
+                        font-size: 30px;
+                    }
+
+                }
+            }
+        }
+
+        .img_main {
+            min-height: 660px;
+            margin-top: 50px;
+        }
+    }
+}

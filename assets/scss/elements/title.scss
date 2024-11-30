@@ -1,0 +1,40 @@
+.title {
+    margin: 0;
+    color: $colorWhite;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &_main {
+        font-size: 36px;
+    }
+}
+
+
+@media (min-width: 648px) {
+    .title {
+        &_main {
+            font-size: 48px;
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .title {
+        &_main {
+            font-size: 56px;
+            line-height: 50px;
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .title {
+        &_main {
+            font-size: 76px;
+        }
+    }
+}

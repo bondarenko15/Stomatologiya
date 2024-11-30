@@ -1,10 +1,28 @@
-// Button 
- 
-// Element
-
 // Style
+@import "style_elements/variables";
+@import "style_elements/normalize";
+@import "style_elements/fonts";
+@import "style_elements/animate";
+@import "style_elements/swiper";
+
+
+
+// Element
+@import "elements/button";
+@import "elements/block_title";
+@import "elements/title";
+
+// repeat_blocks
+@import "repeat_blocks/mobile_menu";
+@import "repeat_blocks/header";
+@import "repeat_blocks/footer";
+@import "repeat_blocks/banner";
+
 
 // Pages
+@import "pages/index/index";
+@import "pages/services/services";
+
 
 body {
     min-height: 100vh;
@@ -13,7 +31,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
+.no-scroll {
+    overflow: hidden;
+}
 html {
     box-sizing: border-box;
     position: relative;
@@ -48,7 +68,7 @@ img {
     height: auto;
 }
 
-i{
+i {
     font-style: normal;
 }
 
@@ -66,11 +86,11 @@ input[type="submit"] {
 }
 
 input:not([type=checkbox]):not([type=radio]),
-textarea, 
+textarea,
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 button {
@@ -88,9 +108,9 @@ button {
     }
 }
 
-input{
-    -webkit-appearance: none;   
-    appearance: none;   
+input {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 a {
@@ -99,48 +119,36 @@ a {
 
 .container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
     position: relative;
-
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 648px) {
     .container {
-        width: 648px;
-        padding: 0;
+        padding: 0 40px;
     }
 
 }
 
-@media (min-width: 1024px) {
-
+@media (min-width: 960px) {
     .container {
-        width: 864px;
-    }
-
-}
-
-@media (min-width: 1280px) {
-
-    .container {
-        width: 1080px;
-    }
-
-}
-
-@media (min-width: 1400px) {
-
-    .container {
-        width: 1240px;
+        padding: 0 60px;
     }
 
 }
 
 
-@media (min-width: 1600px) {
+@media (min-width: 1366px) {
+    .container {
+        padding: 0 100px;
+    }
 
-    
+}
 
+
+@media (min-width: 1880px) {
+    .container {
+        padding: 0 120px;
+    }
 }
