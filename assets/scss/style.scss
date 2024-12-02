@@ -11,6 +11,7 @@
 @import "elements/button";
 @import "elements/block_title";
 @import "elements/title";
+@import "elements/form";
 
 // repeat_blocks
 @import "repeat_blocks/mobile_menu";
@@ -22,6 +23,11 @@
 // Pages
 @import "pages/index/index";
 @import "pages/services/services";
+@import "pages/our-team/our-team";
+@import "pages/doctor/doctor";
+@import "pages/contacts/contacts";
+
+
 
 
 body {

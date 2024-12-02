@@ -1,0 +1,199 @@
+.form {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: #29292B;
+    }
+
+    .form_title {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: block;
+        margin-bottom: 20px;
+
+    }
+}
+
+.form_wide {
+    padding: 20px 15px;
+
+    .inputs {
+
+
+        input,
+        textarea {
+            padding: 15px 20px;
+            background: #313135;
+            width: 100%;
+            color: #C9C9C9;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 15px;
+            border: none;
+
+
+
+        }
+
+        input {
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        .custom-select {
+            background: #313135;
+            width: 100%;
+            padding: 15px 20px;
+            position: relative;
+            color: #C9C9C9;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &__selected {
+                cursor: pointer;
+                position: relative;
+
+                &:after {
+                    content: '▼';
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #b7b7b7;
+                    font-size: 10px;
+                    transition: .1s all ease;
+                }
+            }
+
+            &__options {
+                display: none;
+                position: absolute;
+                background: #313135;
+                width: 100%;
+                border-radius: 0 0 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+                color: #C9C9C9;
+                z-index: 1;
+                font-family: Inter;
+                font-size: 14px;
+                top: 100%;
+                left: 0;
+
+                .custom-select__option {
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &--open {
+                .custom-select__selected {
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+
+                .custom-select__options {
+                    display: block;
+
+                }
+            }
+
+        }
+
+        textarea {
+            margin: 15px 0 0;
+            height: 250px;
+        }
+    }
+}
+
+
+
+@media (min-width: 648px) {
+    .form {
+        .form_title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .form_wide {
+        padding: 25px 20px;
+
+        .inputs {
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            input {
+                padding: 20px 25px;
+                font-size: 16px;
+                margin: 0;
+                width: calc(50% - 10px);
+            }
+
+            .custom-select {
+                width: calc(50% - 10px);
+                padding: 20px 25px;
+                font-size: 16px;
+
+            }
+
+            textarea {
+                margin: 0;
+                height: 178px;
+                width: 100%;
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .form {
+        .form_title {
+            font-size: 22px;
+
+        }
+    }
+
+    .form_wide {
+        padding: 25px;
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .form {
+        .form_title {
+            font-size: 24px;
+            margin-bottom: 30px;
+
+        }
+    }
+
+    .form_wide {
+        padding: 35px 40px;
+    }
+}

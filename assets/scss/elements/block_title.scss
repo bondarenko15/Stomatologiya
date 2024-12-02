@@ -33,6 +33,17 @@
             display: inline;
         }
     }
+
+    .pages_descr {
+        margin-top: 30px;
+        display: block;
+        color: $colorWhite;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 }
 
 @media (min-width: 648px) {
@@ -46,6 +57,11 @@
             font-size: 40px;
             margin-top: 30px;
         }
+
+        .pages_descr {
+            margin-top: 15px;
+            font-size: 20px;
+        }
     }
 }
 
@@ -53,9 +69,18 @@
 @media (min-width: 1366px) {
     .block_title {
         max-width: 70%;
+
         .pages_subtitle {
             font-size: 48px;
         }
+
+        .pages_descr {
+            font-size: 22px;
+            max-width: 925px;
+        }
+    }
+    .block_title-wide {
+        max-width: 100%;
     }
 }
 
@@ -69,6 +94,12 @@
 
         .pages_subtitle {
             font-size: 64px;
+        }
+
+        .pages_descr {
+            margin-top: 30px;
+            font-size: 24px;
+            max-width: 950px;
         }
     }
 }

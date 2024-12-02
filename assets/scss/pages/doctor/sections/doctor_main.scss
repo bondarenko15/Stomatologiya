@@ -1,0 +1,179 @@
+.doctor_main {
+    padding: 100px 0 35px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .block_content {
+            margin-top: 30px;
+
+            &-img {
+                position: relative;
+                padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    right: 0;
+                    bottom: 25px;
+                    border: 1px solid rgba(224, 170, 121, 0.27);
+                    z-index: -1;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .block_flex {
+                .block_content-descr {
+                    margin-top: 30px;
+
+                    p {
+                        color: #FFF;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+                }
+
+                .block_content-form {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .doctor_main {
+        padding: 100px 0 80px;
+
+        .container {
+            .block_content {
+                margin-top: 60px;
+
+                &-img {
+                    padding: 0 30px;
+
+                    &::before {
+                        top: 50px;
+                        bottom: 50px;
+                    }
+                }
+
+                .block_flex {
+                    .block_content-descr {
+
+                        p {
+                            font-size: 16px;
+                            line-height: 23px;
+                        }
+                    }
+
+                    .block_content-form {
+                        margin-top: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 1366px) {
+    .doctor_main {
+        padding: 210px 0 70px;
+
+        .container {
+            .block_content {
+                margin-top: 60px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 0 100px;
+
+                &-img {
+                    width: calc(45% - 50px);
+                    flex-shrink: 0;
+                    padding: 0 30px;
+
+                    &::before {
+                        top: 50px;
+                        bottom: 50px;
+                    }
+                }
+
+                .block_flex {
+                    width: calc(55% - 50px);
+
+                    .block_content-descr {
+                        margin: 0;
+                    }
+
+                    .block_content-form {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (min-width: 1880px) {
+    .doctor_main {
+        padding: 240px 0 100px;
+
+        .container {
+            .block_content {
+                margin-top: 100px;
+                &-img {
+                    width: calc(43% - 50px);
+                    flex-shrink: 0;
+                    padding: 0 40px;
+
+                    &::before {
+                        top: 60px;
+                        bottom: 60px;
+                    }
+                }
+
+                .block_flex {
+                    width: calc(57% - 50px);
+
+                    .block_content-descr {
+                        margin: 0;
+                        p {
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
+                    }
+
+                    .block_content-form {
+                        margin-top: 70px;
+                    }
+                }
+            }
+        }
+    }
+
+}
