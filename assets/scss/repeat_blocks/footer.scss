@@ -49,7 +49,10 @@
                     border: 1px solid $colorWhite;
                     padding: 8px;
                     transition: .3s all ease;
-
+                    img {
+                        width: 18px;
+                        height: 18px;
+                    }
                     &:hover {
                         border: 1px solid #E3C7B7;
 

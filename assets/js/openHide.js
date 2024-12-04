@@ -91,4 +91,30 @@ export default function openHide() {
         });
     });
 
+
+
+
+    const modalOpenBtn = document.querySelectorAll('.btn_modalOpen');
+    const modalForm = document.querySelector('.modal_form');
+    const modalCloseBtn = document.querySelector('.modal_close');
+    const modalWrapper = document.querySelector('.modal_wrapper');
+
+    modalOpenBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            modalForm.classList.add('modal_form-open');
+        });
+    })
+
+    
+
+    modalCloseBtn.addEventListener('click', () => {
+        modalForm.classList.remove('modal_form-open');
+    });
+
+    modalForm.addEventListener('click', (e) => {
+        if (e.target === modalWrapper) {
+            modalForm.classList.remove('modal_form-open');
+        }
+    });
+
 }

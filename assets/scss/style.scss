@@ -18,7 +18,8 @@
 @import "repeat_blocks/header";
 @import "repeat_blocks/footer";
 @import "repeat_blocks/banner";
-
+@import "repeat_blocks/main_section";
+@import "repeat_blocks/modal_form";
 
 // Pages
 @import "pages/index/index";
@@ -26,7 +27,9 @@
 @import "pages/our-team/our-team";
 @import "pages/doctor/doctor";
 @import "pages/contacts/contacts";
-
+@import "pages/service/service";
+@import "pages/prices/prices";
+@import "pages/equipment/equipment";
 
 
 

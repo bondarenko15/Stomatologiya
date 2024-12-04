@@ -1,0 +1,273 @@
+.prices_main {
+    position: relative;
+    padding: 100px 0 35px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .default_tabs {
+            margin-top: 50px;
+            overflow-x: scroll;
+            display: flex;
+            justify-content: flex-start;
+            gap: 0 10px;
+            align-items: center;
+
+            .default_tab {
+                padding: 15px 8px;
+                border: 1px solid #E3C7B7;
+                color: #E3C7B7;
+                text-align: center;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                display: inline-block;
+                flex-shrink: 0;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .default_tab-active {
+                background: #E3C7B7;
+                color: #212122;
+            }
+        }
+
+        .block_tabs {
+            margin-top: 40px;
+
+            .block_tab {
+                display: none;
+
+                &-title {
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .prices_list {
+                    margin-top: 25px;
+                    padding: 20px 15px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        z-index: -1;
+                        background: #29292B;
+                    }
+
+                    &-title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid #E3C7B7;
+                        padding: 0 0 20px;
+
+                        span {
+                            color: #E3C7B7;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }
+
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 15px 0;
+                        gap: 0 20px;
+                        border-bottom: 1px solid #353538;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        .prices_list-name,
+                        .prices_list-value {
+                            color: #FFF;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+
+                        .prices_list-name {
+                            max-width: 65%;
+                        }
+
+                        .prices_list-value {
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+            }
+
+            .block_tab-active {
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 648px) {
+    .prices_main {
+        padding: 100px 0 25px;
+
+        .container {
+            .default_tabs {
+                margin-top: 30px;
+                overflow-x: visible;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .default_tab {
+                    padding: 15px;
+                    font-size: 16px;
+                }
+            }
+
+            .block_tabs {
+                margin-top: 80px;
+
+                .block_tab {
+
+                    &-title {
+                        font-size: 28px;
+                    }
+
+                    .prices_list {
+                        margin-top: 40px;
+                        padding: 25px 40px;
+
+                        &-title {
+                            padding: 0 0 25px;
+
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+
+                        li {
+                            padding: 20px 0;
+                            gap: 0 100px;
+
+                            .prices_list-name,
+                            .prices_list-value {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .prices_main {
+        padding: 210px 0 70px;
+
+        .container {
+            .default_tabs {
+                margin-top: 35px;
+
+                .default_tab {
+                    padding: 15px 20px;
+                    transition: .15s all ease;
+                    &:hover {
+                        background: #E3C7B7;
+                        color: #212122;
+                    }
+                }
+            }
+
+            .block_tabs {
+                margin-top: 100px;
+
+                .block_tab {
+                    &-title {
+                        font-size: 32px;
+                    }
+
+                    .prices_list {
+                        margin-top: 50px;
+
+                        li {
+                            padding: 25px 0;
+                            gap: 0 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 1880px) {
+    .prices_main {
+        padding: 240px 0 100px;
+
+        .container {
+            .default_tabs {
+                margin-top: 60px;
+                gap: 30px 40px;
+
+                .default_tab {
+                    padding: 18px 25px;
+                    font-size: 18px;
+                }
+            }
+
+            .block_tabs {
+                margin-top: 80px;
+
+                .block_tab {
+                    &-title {
+                        font-size: 40px;
+
+                        span {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .prices_list {
+                        padding: 30px 40px;
+
+                        li {
+                            padding: 27px 0;
+                            gap: 0 250px;
+
+                            .prices_list-name,
+                            .prices_list-value {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

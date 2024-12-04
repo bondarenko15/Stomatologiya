@@ -21,14 +21,10 @@
                     <span></span>
                 </div>
                 <div class="header_flex-actions">
-                    <ul class="cities">
-                        <li>
-                            <a href="#" class="active">Київ</a>
-                        </li>
-                        <li>
-                            <a href="#">Харків</a>
-                        </li>
-                    </ul>
+                    <div class="cities">
+                        <a href="#" class="active">Київ</a>
+                        <a href="#">Харків</a>
+                    </div>
                     <div class="language">
                         <div class="active_lang">
                             <span class="language_active">UA</span>
@@ -267,7 +263,7 @@
                     </div>
                     <span class="mobile_menu-close"></span>
                 </div>
-                <a href="#" class="mobile_phone">+38(050) 489 53 80</a>
+                <a href="#" class="phone_number">+38(050) 489 53 80</a>
             </div>
             <ul class="mobile_menu-nav">
                 <li>
@@ -464,6 +460,30 @@
         </div>
     </div>
 </div>
+   <div class="modal_form">
+    <div class="modal_wrapper">
+        <span class="modal_close"></span>
+        <h4 class="modal_title">Записатися на консультацію</h4>
+        <p class="modal_descr">Ваш ідеальний зубний догляд починається тут — запишіться зараз!</p>
+        <form action="#" class="form form_wide">
+            <div class="inputs">
+                <input type="text" name="name" placeholder="Ім'я">
+                <input type="text" name="phone" placeholder="Телефон">
+                <input type="text" name="mail" placeholder="Email">
+                <div class="custom-select">
+                    <div class="custom-select__selected">Оберіть тип обладнення</div>
+                    <ul class="custom-select__options">
+                        <li class="custom-select__option">Послуга 1</li>
+                        <li class="custom-select__option">Послуга 2</li>
+                        <li class="custom-select__option">Послуга 3</li>
+                    </ul>
+                </div>
+                <textarea name="textarea" placeholder="Коментар"></textarea>
+            </div>
+            <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
+        </form>
+    </div>
+</div>
    <section class="main_services services_main">
     <div class="container">
         <div class="main_services-title">
@@ -472,7 +492,7 @@
                 <p class="pages_subtitle"><i>25 років бездоганної репутації.</i> Беремося за найскладніші випадки в
                     стоматології!</p>
             </div>
-            <button class="btn btn_modal-two">Консультація</button>
+            <button class="btn btn_modal-two btn_modalOpen">Консультація</button>
         </div>
         <div class="services_menu">
             <div class="services_menu-item">
@@ -537,7 +557,7 @@
     <div class="container">
         <div class="banner_main" style="background: url('../img/banner.png') 75% 50%/cover no-repeat;">
             <h4 class="banner_title">Запишіться на консультацію прямо зараз</h4>
-            <button class="btn btn_modal-two">Записатисья на консультацію</button>
+            <button class="btn btn_modal-two btn_modalOpen">Записатисья на консультацію</button>
         </div>
     </div>
 </section>

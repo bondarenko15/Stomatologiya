@@ -120,26 +120,17 @@
                             justify-content: flex-start;
                             align-items: center;
                             gap: 0 40px;
-
-                            li {
+                            a {
+                                color: $colorWhite;
+                                font-family: Inter;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
                                 position: relative;
-
-                                a {
-                                    color: $colorWhite;
-                                    font-family: Inter;
-                                    font-size: 16px;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    line-height: normal;
-
-
-
-
-                                    &:hover {
-                                        color: #E3C7B7;
-                                    }
+                                &:hover {
+                                    color: #E3C7B7;
                                 }
-
                                 &:first-child {
                                     &::after {
                                         content: '';
@@ -151,10 +142,12 @@
                                         height: 15px;
                                     }
                                 }
+                            }
 
-                                .active {
-                                    color: #E3C7B7;
-                                }
+                            
+
+                            .active {
+                                color: #E3C7B7;
                             }
                         }
                     }
@@ -375,6 +368,7 @@
                                         padding: 20px 40px;
                                         width: 70%;
                                         cursor: default;
+
                                         .sublink {
                                             h4 {
                                                 color: $colorWhite;
@@ -438,6 +432,11 @@
                             padding: 12px;
                             transition: .3s all ease;
 
+                            img {
+                                width: 18px;
+                                height: 18px;
+                            }
+
                             &:hover {
                                 border: 1px solid #E3C7B7;
 
@@ -470,10 +469,8 @@
                         gap: 0 60px;
 
                         .cities {
-                            li {
-                                a {
-                                    font-size: 18px;
-                                }
+                            a {
+                                font-size: 18px;
                             }
                         }
                     }

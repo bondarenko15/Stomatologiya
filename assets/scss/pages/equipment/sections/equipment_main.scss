@@ -1,0 +1,268 @@
+.equipment_main {
+    position: relative;
+    padding: 100px 0 35px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .default_tabs {
+            margin-top: 50px;
+            overflow-x: scroll;
+            display: flex;
+            justify-content: flex-start;
+            gap: 0 10px;
+            align-items: center;
+
+            .default_tab {
+                padding: 15px 8px;
+                border: 1px solid #E3C7B7;
+                color: #E3C7B7;
+                text-align: center;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                display: inline-block;
+                flex-shrink: 0;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .default_tab-active {
+                background: #E3C7B7;
+                color: #212122;
+            }
+        }
+
+        .block_tabs {
+            margin-top: 40px;
+
+            .block_tab {
+                display: none;
+
+                &-descr {
+                    .block_tab-title {
+                        color: #FFF;
+                        font-family: Inter;
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    p {
+                        display: block;
+                        color: #FFF;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                        margin-top: 20px;
+                    }
+                }
+
+                &-img {
+                    position: relative;
+                    padding: 0 15px;
+                    margin-top: 40px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        right: 0;
+                        bottom: 30px;
+                        border: 1px solid rgba(224, 170, 121, 0.27);
+                        z-index: -1;
+                    }
+
+                    .img {
+                        height: 300px;
+                    }
+                }
+            }
+
+            .block_tab-active {
+                display: block;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .equipment_main {
+        padding: 100px 0 25px;
+
+        .container {
+            .default_tabs {
+                margin-top: 30px;
+                overflow-x: visible;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .default_tab {
+                    padding: 15px;
+                    font-size: 16px;
+                }
+            }
+
+            .block_tabs {
+                margin-top: 50px;
+
+                .block_tab {
+                    &-descr {
+                        .block_tab-title {
+                            font-size: 32px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 25px;
+                        }
+                    }
+
+                    &-img {
+                        padding: 0 30px;
+                        margin-top: 40px;
+
+                        &::before {
+                            top: 35px;
+                            bottom: 35px;
+                        }
+
+                        .img {
+                            height: 430px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .equipment_main {
+        padding: 210px 0 70px;
+
+        .container {
+            .default_tabs {
+                margin-top: 35px;
+
+                .default_tab {
+                    padding: 15px 20px;
+                    transition: .15s all ease;
+                    &:hover {
+                        background: #E3C7B7;
+                        color: #212122;
+                    }
+                }
+            }
+
+            .block_tabs {
+                .block_tab {
+                    margin-top: 60px;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 0 125px;
+                    flex-direction: row-reverse;
+
+                    &-descr {
+                        width: 60%;
+
+                        .block_tab-title {
+                            font-size: 36px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            line-height: 27px;
+                        }
+                    }
+
+                    &-img {
+                        width: 40%;
+                        margin-top: 0;
+                        flex-shrink: 0;
+
+                        &::before {
+                            top: 35px;
+                            bottom: 35px;
+
+                        }
+
+                        .img {
+                            height: 500px;
+                        }
+                    }
+                }
+                .block_tab-active {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 1880px) {
+    .equipment_main {
+        padding: 240px 0 100px;
+
+        .container {
+            .default_tabs {
+                margin-top: 60px;
+                gap: 30px 40px;
+                .default_tab {
+                    padding: 18px 25px;
+                    font-size: 18px;
+                }
+            }
+
+            .block_tabs {
+                .block_tab {
+                    margin-top: 80px;
+                    gap: 0 140px;
+                    &-descr {
+                        width: 55%;
+                        .block_tab-title {
+                            font-size: 40px;
+                        }
+
+                        p {
+                            margin-top: 25px;
+                            font-size: 20px;
+                            line-height: 29px;
+                        }
+                    }
+
+                    &-img {
+                        width: 45%;
+                        padding:  0 40px;
+                        &::before {
+                            top: 70px;
+                            bottom: 70px;
+
+                        }
+
+                        .img {
+                            height: 700px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

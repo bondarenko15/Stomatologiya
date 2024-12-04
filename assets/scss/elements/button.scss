@@ -8,7 +8,7 @@
     line-height: normal;
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 0 7px;
     transition: .2s all ease;
@@ -61,6 +61,9 @@
             justify-content: center;
             
         }
+        &_service {
+            width: 310px;
+        }
     }
 }
 
@@ -85,6 +88,9 @@
                     background: url('../img/arrow_white.svg') center center/cover no-repeat;
                 }
             }
+        }
+        &_service {
+            display: none;
         }
     }
 }
