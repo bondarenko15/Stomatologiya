@@ -9,6 +9,7 @@
     opacity: 0;
     visibility: hidden;
     transition: .15s all ease;
+
     &::before {
         content: '';
         position: absolute;
@@ -70,12 +71,30 @@
         }
     }
 }
+
 .modal_form-open {
     visibility: visible;
     overflow: visible;
     opacity: 1;
 }
 
+.modal_form-openNarrow {
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    .modal_wrapper {
+        .form {
+            .inputs {
+                .custom-select {
+                    display: none;
+                }
+                textarea {
+                    display: none;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 648px) {
     .modal_form {
@@ -103,6 +122,20 @@
                 overflow-y: visible;
                 max-height: none;
                 padding: 0;
+            }
+        }
+    }
+    .modal_form-openNarrow {
+        .modal_wrapper {
+            max-width: 30%;
+            .form {
+                
+                .inputs {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -136,6 +169,12 @@
             }
         }
     }
+    .modal_form-openNarrow {
+        .modal_wrapper {
+            max-width: 30%;
+            
+        }
+    }
 }
 
 
@@ -162,6 +201,12 @@
             .form {
                 margin-top: 50px;
             }
+        }
+    }
+    .modal_form-openNarrow {
+        .modal_wrapper {
+            max-width: 30%;
+            
         }
     }
 }

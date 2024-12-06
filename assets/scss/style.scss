@@ -20,6 +20,7 @@
 @import "repeat_blocks/banner";
 @import "repeat_blocks/main_section";
 @import "repeat_blocks/modal_form";
+@import "repeat_blocks/main_section";
 
 // Pages
 @import "pages/index/index";
@@ -47,6 +48,7 @@ html {
     box-sizing: border-box;
     position: relative;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -75,6 +77,7 @@ html {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 i {
