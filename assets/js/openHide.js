@@ -95,48 +95,6 @@ export default function openHide() {
         });
     }
 
-
-
-
-
-
-    const modalForm = document.querySelector('.modal_form') || null;
-    if (modalForm) {
-        const modalOpenBtn = document.querySelectorAll('.btn_modalOpen');
-        const modalCloseBtn = document.querySelector('.modal_close');
-        const modalWrapper = document.querySelector('.modal_wrapper');
-        const modalOpenBtnTwo = document.querySelectorAll('.btn_modalIsOpen');
-
-
-        modalOpenBtnTwo.forEach((button) => {
-            button.addEventListener('click', () => {
-                modalForm.classList.add('modal_form-openNarrow');
-            });
-        })
-
-        modalOpenBtn.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                modalForm.classList.add('modal_form-open');
-            });
-        })
-        modalCloseBtn.addEventListener('click', () => {
-            modalForm.classList.remove('modal_form-open');
-            modalForm.classList.remove('modal_form-openNarrow');
-
-        });
-
-        modalForm.addEventListener('click', (e) => {
-            if (!modalWrapper.contains(e.target)) {
-                modalForm.classList.remove('modal_form-open');
-                modalForm.classList.remove('modal_form-openNarrow');
-            }
-        });
-    }
-
-
-
-
-    
     const sidevarMenu = document.querySelector('.service_sidebar') || null;
     if (sidevarMenu) {
         document.querySelectorAll('.service_sidebar-navigation > li > a').forEach((link) => {

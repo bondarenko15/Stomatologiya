@@ -497,7 +497,7 @@
                             max-height: 1000px;
                             opacity: 1;
                             margin-top: 10px;
-                            padding: 0 10px;
+                            padding: 0;
                         }
 
                         &.active .faq-toggle {
@@ -1309,7 +1309,6 @@
 
                             &.active .faq-answer {
                                 margin-top: 20px;
-                                padding: 0 20px;
                             }
 
                             .faq-answer {

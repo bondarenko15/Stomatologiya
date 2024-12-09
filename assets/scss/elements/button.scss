@@ -12,6 +12,7 @@
     align-items: center;
     gap: 0 7px;
     transition: .2s all ease;
+
     &::after {
         transition: .2s all ease;
         content: '';
@@ -22,21 +23,36 @@
         height: 14px;
     }
 
+    &_opacity {
+        background: transparent;
+        color: #E3C7B7;
+        border: 1px solid #E3C7B7;
+        padding: 15px 25px;
+
+        &::after {
+            background: url('../img/arrow_opacity.svg') center center/cover no-repeat;
+        }
+
+    }
+
     &_modal {
         background: $bgButton;
         color: $colorWhite;
         padding: 15px 25px;
         margin-top: 30px;
     }
+
     &_modal-two {
         background: #E3C7B7;
         padding: 15px 25px;
         margin-top: 35px;
         color: $bgColor;
+
         &::after {
             background: url('../img/arrow_black.svg') center center/cover no-repeat;
         }
     }
+
     &_submitForm {
         width: 100%;
         margin-top: 25px;
@@ -52,17 +68,25 @@
         &_modal {
             padding: 18px 30px;
         }
+
         &_modal-two {
             padding: 18px 30px;
         }
+
         &_submitForm {
             width: auto;
             margin-top: 25px;
             justify-content: center;
-            
+
         }
+
         &_service {
             width: 310px;
+        }
+
+        &_opacity {
+            padding: 18px 30px;
+
         }
     }
 }
@@ -72,23 +96,40 @@
     .btn {
         &_modal {
             margin: 0;
+
             &:hover {
                 background: #E3C7B7;
                 color: $bgColor;
+
                 &::after {
                     background: url('../img/arrow_black.svg') center center/cover no-repeat;
                 }
             }
         }
+
         &_modal-two {
             &:hover {
                 background: $bgButton;
                 color: $colorWhite;
+
                 &::after {
                     background: url('../img/arrow_white.svg') center center/cover no-repeat;
                 }
             }
         }
+
+        &_opacity {
+            &:hover {
+                border: 1px solid transparent;
+                background: #E3C7B7;
+                color: #212122;
+
+                &::after {
+                    background: url('../img/arrow_black.svg') center center/cover no-repeat;
+                }
+            }
+        }
+
         &_service {
             display: none;
         }

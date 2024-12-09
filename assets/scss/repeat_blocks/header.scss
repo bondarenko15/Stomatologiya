@@ -12,7 +12,6 @@
         z-index: -1;
         background: $bgColor;
     }
-
     .container {
         .header_flex {
             padding: 5px 0;
@@ -259,7 +258,7 @@
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
-                            gap: 0 40px;
+                            gap: 0 25px;
 
                             li {
                                 cursor: pointer;
@@ -497,7 +496,11 @@
                 }
 
                 &-bottom {
-                    nav {}
+                    nav {
+                        ul {
+                            gap: 0 40px;
+                        }
+                    }
                 }
             }
         }

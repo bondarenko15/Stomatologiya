@@ -467,7 +467,7 @@
         <h4 class="modal_title">Записатися на консультацію</h4>
         <p class="modal_descr">Ваш ідеальний зубний догляд починається тут — запишіться зараз!</p>
         <form action="#" class="form form_wide">
-            <input type="hidden" name="page_name" value="">
+            <input type="hidden" name="page_name" value="Головна">
             <div class="inputs">
                 <input type="text" name="name" placeholder="Ім'я">
                 <input type="text" name="phone" placeholder="Телефон">
@@ -475,12 +475,17 @@
                 <div class="custom-select">
                     <div class="custom-select__selected">Оберіть тип обладнення</div>
                     <ul class="custom-select__options">
-                        <li class="custom-select__option">Послуга 1</li>
-                        <li class="custom-select__option">Послуга 2</li>
-                        <li class="custom-select__option">Послуга 3</li>
+                        <li class="custom-select__option" data-value="Послуга 1">Послуга 1</li>
+                        <li class="custom-select__option" data-value="Послуга 2">Послуга 2</li>
+                        <li class="custom-select__option" data-value="Послуга 3">Послуга 3</li>
                     </ul>
                 </div>
                 <textarea name="textarea" placeholder="Коментар"></textarea>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox_modal">
+                <label class="checkbox_label-modal" data-checkbox-id="checkbox" for="checkbox">Я погоджуюсь з умовами
+                    політики конфідеальності і дозволю обробляти мої персональні дані</label>
             </div>
             <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
         </form>
@@ -502,10 +507,10 @@
     <div class="service_wrapper">
         <div class="service_sidebar">
             <h4 class="service_sidebar-title">Послуги</h4>
-            <ul class="service_sidebar-navigation">
+            <ul class="service_sidebar-navigation mobile_menu-nav">
                 <li>
                     <a href="#">Діагностика</a>
-                    <ul class="service_sidebar-subnav">
+                    <ul class="service_sidebar-subnav mobile_submenu">
                         <li>
                             <a href="#">Видалення зубів</a>
                         </li>
@@ -534,7 +539,7 @@
                 </li>
                 <li>
                     <a class="active" href="#">Хірургічна стоматологія</a>
-                    <ul class="service_sidebar-subnav service_sidebar-subnav-active">
+                    <ul class="service_sidebar-subnav service_sidebar-subnav-active mobile_submenu">
                         <li>
                             <a href="#">Видалення зубів</a>
                         </li>
@@ -565,7 +570,7 @@
             <button class="btn btn_modal-two btn_modalOpen">Отримати консультацію</button>
         </div>
         <div class="service_content">
-            <ul class="service_nav service-default">
+            <ul class="service_nav service-default ">
                 <li>
                     <a class="link_section" href="#section-1">Опис послуги</a>
                 </li>

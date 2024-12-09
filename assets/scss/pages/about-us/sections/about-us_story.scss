@@ -1,0 +1,133 @@
+.abot-us_story {
+    position: relative;
+    padding: 20px 0 35px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: #29292B;
+    }
+
+    .container {
+        .block_content {
+            margin-top: 40px;
+
+            &-descr {
+                p {
+                    display: block;
+                    margin-top: 30px;
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25px;
+                }
+            }
+
+            &-img {
+                margin-top: 30px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .abot-us_story {
+        padding: 60px 0;
+
+        .container {
+            .block_content {
+                margin-top: 40px;
+
+                &-descr {
+                    p {
+                        margin-top: 30px;
+                        line-height: 27px;
+                    }
+                }
+
+                &-img {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 1366px) {
+    .abot-us_story {
+        padding: 80px 0;
+
+        .container {
+            .block_content {
+                margin-top: 40px;
+
+                &-descr {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    gap: 30px 80px;
+
+                    p {
+                        width: calc(50% - 40px);
+                        margin-top: 0;
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+                }
+
+                &-img {
+                    margin-top: 40px;
+
+                    img {
+                        max-height: 550px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .abot-us_story {
+        padding: 100px 0;
+
+        .container {
+            .block_content {
+                margin-top: 60px;
+
+                &-descr {
+                    gap: 30px 60px;
+
+                    p {
+                        width: calc(50% - 30px);
+                        font-size: 20px;
+                        line-height: 29px;
+                    }
+                }
+
+                &-img {
+                    margin-top: 80px;
+
+                    img {
+                        max-height: 700px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -466,7 +466,7 @@
         <h4 class="modal_title">Записатися на консультацію</h4>
         <p class="modal_descr">Ваш ідеальний зубний догляд починається тут — запишіться зараз!</p>
         <form action="#" class="form form_wide">
-            <input type="hidden" name="page_name" value="">
+            <input type="hidden" name="page_name" value="Головна">
             <div class="inputs">
                 <input type="text" name="name" placeholder="Ім'я">
                 <input type="text" name="phone" placeholder="Телефон">
@@ -474,12 +474,17 @@
                 <div class="custom-select">
                     <div class="custom-select__selected">Оберіть тип обладнення</div>
                     <ul class="custom-select__options">
-                        <li class="custom-select__option">Послуга 1</li>
-                        <li class="custom-select__option">Послуга 2</li>
-                        <li class="custom-select__option">Послуга 3</li>
+                        <li class="custom-select__option" data-value="Послуга 1">Послуга 1</li>
+                        <li class="custom-select__option" data-value="Послуга 2">Послуга 2</li>
+                        <li class="custom-select__option" data-value="Послуга 3">Послуга 3</li>
                     </ul>
                 </div>
                 <textarea name="textarea" placeholder="Коментар"></textarea>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox_modal">
+                <label class="checkbox_label-modal" data-checkbox-id="checkbox" for="checkbox">Я погоджуюсь з умовами
+                    політики конфідеальності і дозволю обробляти мої персональні дані</label>
             </div>
             <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
         </form>
@@ -497,7 +502,174 @@
     <div class="main_section-img" style="background: url('img/main_bg.jpg') center center/cover no-repeat;"></div>
 
 </section>
-    <section class="contacts_main">
+    <section class="about-us_block">
+    <div class="container">
+        <div class="block_title">
+            <p class="pages_subtitle">Ми – стоматологічна клініка, <i>якій можна довіряти</i></p>
+            <span class="pages_descr">Адаптація зарубіжного досвіду, впровадження нових стандартів стоматології,
+                всебічне доопрацювання деталей – ці складові дозволили створити ту Клініку, якою вона є на
+                сьогоднішній
+                день.</span>
+        </div>
+        <div class="block_content">
+            <div class="block_content-img">
+                <img src="img/about-us_block.png" alt="">
+            </div>
+            <div class="block_content-descr">
+                <h5 class="descr-title">Нові технології та абсолютна <i>відповідність міжнародним стандартам</i>
+                </h5>
+                <p class="descr-text">Ці речі представлені в 2-х стоматологічних кабінетах, хірургічному відділенні
+                    з
+                    операційною, окремому рентгенкабінеті, зуботехнічній лабораторії, що загалом дозволяє на порядок
+                    скоротити час лікування, зробити його комфортним та провести всі етапи підготовки та лікування
+                    в одному місці.</p>
+                <a href="#" class="btn btn_modal-two">Наше обладнання</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="about-us_system">
+    <div class="container">
+        <div class="block_title">
+            <p class="pages_subtitle">Система <i>повного супроводу</i></p>
+            <span class="pages_descr">Наші можливості дозволяють провести всі види діагностичних досліджень,
+                імплантологічних операцій, кістково-пластичних операцій, естетичних реставрацій, протезування,
+                ортодонтичних корекцій та терапевтичне лікування у дорослих та дітей, а також лікування патологій
+                скронево-нижнєщелепного суглобу.</span>
+        </div>
+        <div class="block_content">
+            <div class="block_content-img">
+                <img src="img/system.png" alt="">
+            </div>
+            <div class="block_content-descr">
+                <p>«Система повного супроводу» – це наш принцип взаємодії з пацієнтами. В нашій Клініці все спрямоване
+                    на створення абсолютної атмосфери комфорту для відвідувачів.</p>
+                <p>Ми несемо відповідальність за здоров‘я
+                    наших пацієнтів та за якість нашого лікування, тому ми постійно контролюємо його після його
+                    завершення.</p>
+                <div class="descr-img" style="background: url('img/system2.png') center center/cover no-repeat;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="about-us_block">
+    <div class="container">
+        <div class="block_title">
+            <p class="pages_subtitle">Ми – стоматологічна клініка, <i>якій можна довіряти</i></p>
+            <span class="pages_descr">Адаптація зарубіжного досвіду, впровадження нових стандартів стоматології,
+                всебічне доопрацювання деталей – ці складові дозволили створити ту Клініку, якою вона є на
+                сьогоднішній
+                день.</span>
+        </div>
+        <div class="block_content">
+            <div class="block_content-img">
+                <img src="img/about-us_block.png" alt="">
+            </div>
+            <div class="block_content-descr">
+                <h5 class="descr-title">Нові технології та абсолютна <i>відповідність міжнародним стандартам</i>
+                </h5>
+                <p class="descr-text">Ці речі представлені в 2-х стоматологічних кабінетах, хірургічному відділенні
+                    з
+                    операційною, окремому рентгенкабінеті, зуботехнічній лабораторії, що загалом дозволяє на порядок
+                    скоротити час лікування, зробити його комфортним та провести всі етапи підготовки та лікування
+                    в одному місці.</p>
+                <a href="#" class="btn btn_modal-two">Наше обладнання</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="abot-us_story">
+    <div class="container">
+        <div class="block_title">
+            <h2 class="pages_title">Наша історія</h2>
+            <p class="pages_subtitle">Ми почали з однієї мети: <i>викликати посмішку у наших клієнтів</i></p>
+            <span class="pages_descr">Засновник та ідейний натхненник нашої Клініки Шелест Євгеній Леонідович - один з
+                перших, хто поставив дентальний імплант в Україні. Маючи 20-річний досвід роботи у практичній медицині,
+                а також безліч науково-дослідницьких розробок, він втілив весь свій досвід у Клініці, яка була відкрита
+                у 2002 році і яка на цей час працює більше ніж 20 років.‍</span>
+        </div>
+        <div class="block_content">
+            <div class="block_content-descr">
+                <p>З першого дня роботи Клініка спеціалізуєтся на дентальній імплантації та лікуванні складних
+                    стоматологічних випадків.‍Досвід роботи показав, що для досягнення максимально прогнозованого
+                    результату є потреба у розвитку супутніх напрямків, кожен з яких розвивався на піку медичних
+                    технологій.</p>
+                <p>Клініка постійно дооснащується найсучаснішим обладнанням. </p>
+                <p>У розпорядженні лікарів є дентальні мікроскопи Leica, Carl Zeiss та CJ optic з відеокамерою, конусно
+                    - променевий томограф Planmeca, сканер Nobel Procera, Кадіакс-діагностик, внутрішньоротовий сканер
+                    3Shape, 3D принтер, а також одна з кращих наркозних станцій з біс - монітором.</p>
+                <p>Лікарі клініки є висококваліфікованими спеціалістами, постійно вдосконалюють свою майстерність на
+                    індивідуальних майстер-класах у найкращих світових фахівців. Вони також відкрито діляться своїм
+                    досвідом, проводячи власні майстер-класи в Учбовому центрі Клініки.</p>
+            </div>
+        </div>
+        <div class="block_content-img">
+            <img src="img/story.png" alt="">
+        </div>
+    </div>
+</section>
+    <section class="about-us_steps">
+    <div class="container">
+        <div class="block_title">
+            <p class="pages_subtitle">Ми – стоматологічна клініка, <i>якій можна довіряти</i></p>
+            <span class="pages_descr">Адаптація зарубіжного досвіду, впровадження нових стандартів стоматології,
+                всебічне доопрацювання деталей – ці складові дозволили створити ту Клініку, якою вона є на
+                сьогоднішній
+                день.</span>
+        </div>
+        <div class="block_content">
+            <ul class="block_content-steps">
+                <li>
+                    <span class="number">01</span>
+                    <p>20 років успішної роботи клініки, заснованої на філософії бездоганної та глибокої діагностики,
+                        оптимального плану лікування та безкомпромісного виконання результатів роботи.</p>
+                </li>
+                <li>
+                    <span class="number">02</span>
+                    <p>Пацієнти стають для нас друзями, адже ми не тільки відповідальні за результат своєї роботи, але й
+                        проводимо постійний контроль для забезпечення довготривалих результатів.</p>
+                </li>
+                <li>
+                    <span class="number">03</span>
+                    <p>Замкнений цикл лікування - наявність фахівців усіх галузей стоматології та всіх необхідних
+                        діагностичних процедур, КТ-кабінету та власної зуботехнічної лабораторії в одному місці:
+                        мінімальна витрата часу та зручність для наших пацієнтів.</p>
+                </li>
+                <li>
+                    <span class="number">04</span>
+                    <p>Стоматологія - одна з галузей медицини, що найбільш швидко розвивається, саме тому наші лікарі не
+                        тільки постійно відвідують курси топових фахівців, але й проводять їх у нашому власному
+                        навчальному центрі Shelest Education.</p>
+                </li>
+                <li>
+                    <span class="number">05</span>
+                    <p>Наша клініка – синергія здоров'я та естетики, для досягнення ідеальних результатів в клініці
+                        Шелеста працюють лікарі-косметологи.</p>
+                </li>
+                <li>
+                    <span class="number">06</span>
+                    <p>Комфортне вирішення стоматологічних проблем підвищеної складності – наша спеціалізація.</p>
+                </li>
+                <li>
+                    <span class="number">07</span>
+                    <p>Ми використовуємо тільки найкращі технології та матеріали, які представлені на ринку – жодних
+                        компромісів!</p>
+                </li>
+            </ul>
+            <div class="block_content-btn">
+                <div>
+                    <button class="btn btn_modal-two btn_modalOpen">Записатися на консультацію</button>
+                </div>
+                <div>
+                    <a href="#" class="btn btn_opacity">Огляд послуг</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="contacts_main prices_contacts">
     <div class="container">
         <div class="block_title">
             <h2 class="pages_title">Наші контакти</h2>
@@ -535,6 +707,11 @@
                         </div>
                         <textarea name="textarea" placeholder="Коментар"></textarea>
                     </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox_modal">
+                        <label class="checkbox_label-modal" data-checkbox-id="checkbox" for="checkbox">Я погоджуюсь з умовами
+                            політики конфідеальності і дозволю обробляти мої персональні дані</label>
+                    </div>
                     <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
                 </form>
             </div>
@@ -544,6 +721,9 @@
         </div>
     </div>
 </section>
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -701,7 +881,9 @@
 </footer>
 
     <!-- Скрипты -->
-
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script type="module" src="js/script.min.js"></script>
 
 </body>

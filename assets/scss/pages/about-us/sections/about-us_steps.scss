@@ -1,0 +1,184 @@
+.about-us_steps {
+    padding: 30px 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .block_content {
+            &-steps {
+                display: flex;
+                flex-direction: column;
+                gap: 15px 0;
+                margin-top: 30px;
+
+                li {
+                    padding: 10px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 0 15px;
+                    background: #29292B;
+
+                    .number {
+                        flex-shrink: 0;
+                        color: #E3C7B7;
+                        font-family: Inter;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 100;
+                        line-height: normal;
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 19px;
+                    }
+                }
+            }
+
+            &-btn {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .about-us_steps {
+        padding: 40px 0;
+
+        .container {
+            .block_content {
+                &-steps {
+                    margin-top: 50px;
+
+                    li {
+                        padding: 15px;
+                        gap: 0 25px;
+
+                        .number {
+                            font-size: 48px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+
+                &-btn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    margin-top: 50px;
+
+                    .btn {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .about-us_steps {
+        padding: 60px 0;
+
+        .container {
+            .block_content {
+                &-steps {
+                    margin-top: 60px;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: stretch;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    li {
+                        padding: 25px 20px;
+                        width: calc(50% - 10px);
+
+                        .number {
+                            font-size: 48px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+                &-btn {
+                    justify-content: flex-start;
+                    gap: 0 20px;
+                    div {
+                        width: calc(50% - 10px);
+                        display: flex;
+                        justify-content: flex-end;
+                        &:last-child {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .about-us_steps {
+        padding: 60px 0;
+
+        .container {
+            .block_content {
+                &-steps {
+                    margin-top: 70px;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: stretch;
+                    flex-wrap: wrap;
+                    gap: 30px;
+
+                    li {
+                        width: calc(50% - 15px);
+
+                        .number {
+                            font-size: 64px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+                &-btn {
+                    margin-top: 65px;
+                    gap: 30px;
+                    div {
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+    }
+}
