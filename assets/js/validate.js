@@ -74,6 +74,15 @@ export default function validateForm() {
                     }
 
                     if (!errors.length) {
+                        var data = {};
+                        data['contact_phone'] = contactPhone.value;
+                        data['conatct_name'] = contactName.value;
+                        data['contact_msg'] = contactMessage.value;
+                        data['contact_email'] = contactEmail.value;
+                        data['page_referer'] = namePage.value;
+
+
+
                         const message = `---------------------------\n\r
 Заявка прийшла з сторінки: ${namePage?.value || 'Не вказано'}\n\r
 Ім'я користувача: ${contactName.value}\n\r
