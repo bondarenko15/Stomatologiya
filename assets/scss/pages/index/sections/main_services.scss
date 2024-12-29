@@ -185,9 +185,6 @@
                     align-items: flex-start;
                     gap: 0 40px;
                     transition: .3s all ease;
-                    &:hover {
-                        transform: scale(1.05);
-                    }
                     .menu-item_img {
                         width: 610px;
                         height: 310px;
@@ -245,6 +242,16 @@
                                 &:hover {
                                     a {
                                         color: #E3C7B7;
+                                    }
+                                }
+                            }
+                            .more_link {
+                                transition: .15s all ease;
+                                &:hover {
+                                    color: #e3c7b7;
+                                    &::after {
+                                        content: '';
+                                        background: url('../img/arrow_hover.svg') center center/cover no-repeat;
                                     }
                                 }
                             }

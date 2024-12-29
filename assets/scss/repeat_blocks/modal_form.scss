@@ -70,6 +70,54 @@
             padding: 0;
         }
     }
+
+    .thank-you-popup {
+        background: #29292B;
+        padding: 40px 50px;
+        text-align: center;
+        z-index: 1000;
+        max-width: 90%;
+        position: relative;
+        .thank-you-message h2 {
+            color: #E3C7B7;
+            text-align: center;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .thank-you-message p {
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: block;
+            margin-top: 7px;
+        }
+
+        .thank-you-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: url('../img/close_modal2.svg') center center/cover no-repeat;
+            border: none;
+            cursor: pointer;
+            display: block;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.modalActive {
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
 }
 
 .modal_form-openWide {
@@ -82,12 +130,14 @@
     visibility: visible;
     overflow: visible;
     opacity: 1;
+
     .modal_wrapper {
         .form {
             .inputs {
                 .custom-select {
                     display: none;
                 }
+
                 textarea {
                     display: none;
                 }
@@ -124,14 +174,30 @@
                 padding: 0;
             }
         }
+
+        .thank-you-popup {
+            padding: 40px 50px;
+            max-width: 60%;
+
+            .thank-you-message h2 {
+                font-size: 24px;
+            }
+
+            .thank-you-message p {
+                font-size: 18px;
+            }
+        }
     }
+
     .modal_form-openNarrow {
         .modal_wrapper {
             max-width: 50%;
+
             .form {
-                
+
                 .inputs {
                     width: 100%;
+
                     input {
                         width: 100%;
                     }
@@ -168,11 +234,24 @@
                 margin-top: 40px;
             }
         }
+        .thank-you-popup {
+            padding: 70px 100px;
+            max-width: 50%;
+
+            .thank-you-message h2 {
+                font-size: 32px;
+            }
+
+            .thank-you-message p {
+                font-size: 24px;
+            }
+        }
     }
+
     .modal_form-openNarrow {
         .modal_wrapper {
             max-width: 30%;
-            
+
         }
     }
 }
@@ -203,10 +282,11 @@
             }
         }
     }
+
     .modal_form-openNarrow {
         .modal_wrapper {
             max-width: 30%;
-            
+
         }
     }
 }

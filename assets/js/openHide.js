@@ -133,5 +133,25 @@ export default function openHide() {
             faqItem.classList.toggle('active');
         });
     });
-    
+
+
+
+    const mainImgBlock = document.querySelector('.main_img-block');
+    const messengers = document.querySelector('.messengers');
+    const footerWidgets = document.querySelector('.footer-widgets');
+
+    if (mainImgBlock && messengers && footerWidgets) {
+        mainImgBlock.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            messengers.classList.toggle('messengersActive');
+            footerWidgets.classList.toggle('footer-widgetsActive');
+        });
+        document.addEventListener('click', (event) => {
+            if (!footerWidgets.contains(event.target)) {
+                messengers.classList.remove('messengersActive');
+                footerWidgets.classList.remove('footer-widgetsActive');
+            }
+        });
+    }
+
 }

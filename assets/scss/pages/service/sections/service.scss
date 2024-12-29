@@ -133,16 +133,7 @@
                             font-style: normal;
                             font-weight: 400;
                             line-height: normal;
-                            padding: 0 5px;
-
-                            &::before {
-                                content: '';
-                                display: block;
-                                width: 4px;
-                                height: 4px;
-                                border-radius: 50px;
-                                background: $colorWhite;
-                            }
+                            
                         }
 
                         .descr-bold {
@@ -490,7 +481,7 @@
                             max-height: 0;
                             overflow: hidden;
                             opacity: 0;
-                            transition: max-height 0.01s ease, opacity 0.2s ease;
+                            transition: .1s all ease;
                         }
 
                         &.active .faq-answer {
@@ -970,10 +961,9 @@
             .service_sidebar {
                 position: sticky;
                 top: 20px;
-                padding: 20px 70px;
+                padding: 20px 40px;
                 flex-shrink: 0;
-                height: 520px;
-                overflow-y: scroll;
+                min-height: 280px;
                 background: #29292B;
                 width: calc(35% - 25px);
 
@@ -1177,6 +1167,7 @@
 
                     .flex-reverse {
                         flex-direction: row-reverse;
+                        justify-content: space-around;
                     }
                 }
 
@@ -1388,8 +1379,8 @@
             padding: 0 120px;
 
             .service_sidebar {
-                padding: 20px 80px;
-                height: 540px;
+                padding: 20px 50px;
+                min-height: 350px;
                 width: calc(30% - 25px);
 
                 &-title {
@@ -1488,12 +1479,6 @@
 
                             li {
                                 font-size: 18px;
-
-                                &::before {
-                                    width: 6px;
-                                    height: 6px;
-
-                                }
                             }
 
                             .descr-bold {

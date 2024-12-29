@@ -59,6 +59,9 @@
         justify-content: center;
 
     }
+    &_404 {
+        margin: 0;
+    }
 }
 
 
@@ -87,6 +90,10 @@
         &_opacity {
             padding: 18px 30px;
 
+        }
+        &_404 {
+            margin: 0;
+            padding: 18px 70px;
         }
     }
 }
@@ -132,6 +139,9 @@
 
         &_service {
             display: none;
+        }
+        &_flex {
+            width: fit-content;
         }
     }
 }

@@ -99,7 +99,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 15px 0;
-                max-height: 350px;
+                max-height: 60vh;
                 overflow-y: scroll;
 
                 li {
@@ -108,7 +108,7 @@
                     span {
                         color: #FFF;
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 18px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
@@ -146,7 +146,7 @@
                             span {
                                 color: #FFF;
                                 font-family: Inter;
-                                font-size: 14px;
+                                font-size: 16px;
                                 font-style: normal;
                                 font-weight: 400;
                                 line-height: normal;
@@ -181,7 +181,7 @@
                                     a {
                                         color: #FFF;
                                         font-family: Inter;
-                                        font-size: 12px;
+                                        font-size: 14px;
                                         font-style: normal;
                                         font-weight: 400;
                                         line-height: normal;
@@ -197,6 +197,7 @@
                     position: relative;
                     transition: opacity 0.3s ease;
                     display: inline-block;
+                    margin-top: 20px;
                     .active_lang {
                         display: flex;
                         justify-content: flex-start;

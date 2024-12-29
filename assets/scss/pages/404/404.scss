@@ -1,0 +1,122 @@
+.main_404 {
+    position: relative;
+    padding: 100px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .container {
+        .flex_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            .img {
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+
+            .text_block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                max-width: 270px;
+
+                i {
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: #FFF;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 648px) {
+    .main_404 {
+        padding: 150px 0;
+
+        .container {
+            .flex_wrapper {
+                .text_block {
+                    max-width: 420px;
+
+                    i {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .main_404 {
+        padding: 250px 0 100px;
+
+        .container {
+            .flex_wrapper {
+                .text_block {
+                    max-width: none;
+
+                    i {
+                        font-size: 55px;
+                    }
+
+                    p {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1880px) {
+    .main_404 {
+        padding: 270px 0 120px;
+
+        .container {
+            .flex_wrapper {
+                .text_block {
+                    i {
+                        font-size: 64px;
+                    }
+
+                    p {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

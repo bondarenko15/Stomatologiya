@@ -20,6 +20,27 @@ if (fancybox) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const topIcon = document.querySelector('.top_icon');
+
+    if (!topIcon) return;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 2000) {
+            topIcon.classList.add('top_iconVisible');
+        } else {
+            topIcon.classList.remove('top_iconVisible');
+        }
+    });
+    topIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
 
 
 

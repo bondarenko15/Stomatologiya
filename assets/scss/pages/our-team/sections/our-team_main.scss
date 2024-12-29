@@ -87,6 +87,9 @@
                         height: 280px;
                         max-width: auto;
                     }
+                    .team_descr {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -142,6 +145,12 @@
                     width: calc(25% - 30px);
                     .img {
                         height: 550px;
+                    }
+                    .team_title {
+                        font-size: 18px;
+                    }
+                    .team_subtitle {
+                        font-size: 16px;
                     }
                 }
             }

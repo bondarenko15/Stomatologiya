@@ -32,7 +32,7 @@
 @import "pages/prices/prices";
 @import "pages/equipment/equipment";
 @import "pages/about-us/about-us";
-
+@import "pages/404/404";
 
 
 body {
@@ -42,9 +42,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+
 .no-scroll {
     overflow: hidden;
 }
+
 html {
     box-sizing: border-box;
     position: relative;
@@ -135,12 +137,158 @@ a {
     padding: 0 20px;
     margin: 0 auto;
     position: relative;
+
+    .footer-widgets {
+        display: inline-block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1500;
+
+        .main_img-block {
+            background: linear-gradient(10deg, #A27567 10.36%, #FFD6BE 94.14%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2001;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: inherit;
+                z-index: -1;
+                animation: pulse 2s infinite;
+            }
+        }
+
+
+        .messengers {
+            display: none;
+            transition: .15s all ease;
+            opacity: 0;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .messengersActive {
+            position: absolute;
+            top: -125px;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            transform: translateX(-50%);
+            border-radius: 47px;
+            background: #A3796D;
+            padding: 20px 10px 41px;
+            width: 40px;
+            opacity: 1;
+        }
+    }
+
+    .footer-widgetsActive {
+        .main_img-block {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .top_icon {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0;
+        transition: .15s all ease;
+        width: 40px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+
+}
+
+.instagram-client {
+    position: relative;
+    padding: 20px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $bgColor;
+    }
+
+    .service_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .service_block-title {
+            color: $colorWhite;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: inline-block;
+            margin-top: 40px;
+
+            i {
+                color: #E3C7B7;
+                display: inline;
+            }
+        }
+
+    }
 }
 
 @media (min-width: 648px) {
     .container {
         padding: 0 40px;
+
     }
+
+    .instagram-client {
+        padding: 30px 0;
+
+        .service_block {
+            .service_block-title {
+                margin: 0 auto 30px;
+                font-size: 28px;
+            }
+        }
+    }
+
+
+
 
 }
 
@@ -155,7 +303,73 @@ a {
 @media (min-width: 1366px) {
     .container {
         padding: 0 100px;
+
+        .footer-widgets {
+            .main_img-block {
+                width: 60px;
+                height: 60px;
+                padding: 12px;
+            }
+
+            .messengersActive {
+                position: absolute;
+                top: -167px;
+                left: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                transform: translateX(-50%);
+                border-radius: 47px;
+                background: #A3796D;
+                padding: 20px 10px 61px;
+                width: 60px;
+                opacity: 1;
+            }
+
+            &:hover {
+                .main_img-block {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+            }
+
+
+        }
+
+        .top_icon {
+            width: 48px;
+
+            &:hover {
+                animation: float 2s infinite ease-in-out;
+            }
+        }
+
+        .top_iconVisible {
+            opacity: 0.8;
+            visibility: visible;
+            overflow: visible;
+            height: 48px;
+        }
     }
+
+    .instagram-client {
+        padding: 50px 0;
+
+        .service_block {
+            .service_block-title {
+                margin: 0 auto 40px;
+                font-size: 32px;
+            }
+
+        }
+
+    }
+
+
 
 }
 
@@ -163,5 +377,39 @@ a {
 @media (min-width: 1880px) {
     .container {
         padding: 0 120px;
+
+        .footer-widgets {
+            .main_img-block {
+                width: 86px;
+                height: 86px;
+                padding: 15px;
+            }
+
+            .messengersActive {
+                top: -167px;
+                left: 50%;
+                gap: 20px;
+                border-radius: 47px;
+                padding: 20px 10px 91px;
+                width: 86px;
+            }
+
+
+        }
+
+
     }
+
+    .instagram-client {
+        padding: 80px 0;
+
+        .service_block {
+            .service_block-title {
+                margin: 0 auto 30px;
+                font-size: 40px;
+            }
+
+        }
+    }
+
 }

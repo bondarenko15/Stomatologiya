@@ -49,6 +49,7 @@
                     border: 1px solid $colorWhite;
                     padding: 8px;
                     transition: .3s all ease;
+                    flex-shrink: 0;
                     img {
                         width: 18px;
                         height: 18px;

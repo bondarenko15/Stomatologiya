@@ -8,7 +8,7 @@ export default function validateForm() {
                 const contactPhone = form.querySelector('[name="phone"]');
                 const contactEmail = form.querySelector('[name="mail"]');
                 const contactMessage = form.querySelector('[name="textarea"]');
-                const customSelect = form.querySelector('.custom-select');
+                const customSelectOption = form.querySelector('.custom-select__option[data-service]');
                 const namePage = form.querySelector('[name="page_name"]');
                 const checkbox = form.querySelector('.custom-checkbox');
 
@@ -55,14 +55,13 @@ export default function validateForm() {
                         }
                     }
 
-                    if (customSelect && isFieldVisible(customSelect)) {
-                        const selectedValue = customSelect.getAttribute("data-value") || "";
+                    if (customSelectOption && isFieldVisible(customSelectOption)) {
+                        const selectedValue = customSelectOption.getAttribute("data-service");
                         if (!selectedValue) {
-                            errors.push("Выберите значение из списка");
-                            markError(customSelect);
+                            markErrorField(customSelectOption);
+                            errors.push('select');
                         } else {
-                            resetError(customSelect);
-                            formData.append("custom_select", selectedValue);
+                            resetField(customSelectOption);
                         }
                     }
 
@@ -77,35 +76,23 @@ export default function validateForm() {
                         var data = {};
                         data['contact_phone'] = contactPhone.value;
                         data['conatct_name'] = contactName.value;
-                        data['contact_msg'] = contactMessage.value;
-                        data['contact_email'] = contactEmail.value;
-                        data['page_referer'] = namePage.value;
-
-
+                        data['contact_msg'] = contactMessage?.value || '';
+                        data['contact_email'] = contactEmail?.value || '';
+                        data['page_referer'] = namePage?.value || '';
+                        data['service'] = customSelectOption?.getAttribute("data-service") || 'Не вказано';
 
                         const message = `---------------------------\n\r
 Заявка прийшла з сторінки: ${namePage?.value || 'Не вказано'}\n\r
 Ім'я користувача: ${contactName.value}\n\r
 Телефон користувача: ${contactPhone.value}\n\r
 Email: ${contactEmail?.value || 'Не вказано'}\n\r
-Тип послуги: ${customSelect?.getAttribute("data-value") || 'Не вказано'}\n\r
+Тип послуги: ${customSelectOption?.getAttribute("data-service") || 'Не вказано'}\n\r
 Повідомлення користувача: ${contactMessage?.value || 'Не вказано'}\n\r
 ---------------------------`;
 
                         sendMessageToTelegram(token, chatId, message);
-
-                        sendForm(formData, '/wp-admin/admin-ajax.php')
-                            .then(response => {
-                                if (response.status === 'SUCCESS') {
-                                    clearForm(form);
-                                    showSuccessModal();
-                                } else {
-                                    console.error(response.error);
-                                }
-                            })
-                            .catch(error => {
-                                console.error(error);
-                            });
+                        clearForm(form);
+                        showSuccessModal();
                     }
                 });
             });
@@ -151,23 +138,46 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
     function showSuccessModal() {
         const modalPopUp = document.querySelector('.modal_form');
         if (modalPopUp) {
-            modalPopUp.classList.add('isShow');
-            const modalWrapper = document.querySelector('.wrapper_form');
+            modalPopUp.classList.add('modalActive');
+            const modalWrapper = document.querySelector('.modal_wrapper');
             modalWrapper.style.display = 'none';
 
-            const modalSuccess = document.querySelector('.modal_form .modal_thanks');
-            modalSuccess.style.display = 'block';
+            function createThankYouPopup() {
+                const popup = document.createElement('div');
+                const message = document.createElement('div');
+                const closeButton = document.createElement('button');
+
+                popup.className = 'thank-you-popup';
+                message.className = 'thank-you-message';
+                closeButton.className = 'thank-you-close';
+
+                message.innerHTML = `
+                    <h2>Дякуємо за заявку</h2>
+                    <p>Ми з вами зв'яжемося найближчим часом</p>
+                `;
+
+                popup.appendChild(message);
+                popup.appendChild(closeButton);
+                modalPopUp.appendChild(popup);
+
+                closeButton.addEventListener('click', () => {
+                    popup.remove();
+                });
+
+                setTimeout(() => {
+                    popup.remove();
+                    modalPopUp.classList.remove('modalActive');
+                    modalPopUp.classList.remove('modal_form-openWide');
+                    modalPopUp.classList.remove('modal_form-openNarrow');
+                }, 5000);
+            }
+
+            createThankYouPopup();
         }
+
     }
 
-    async function sendForm(formData, url) {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: formData,
-        });
-        return await response.json();
-    }
-
+    
     async function sendMessageToTelegram(token, chatId, message) {
         const url = `https://api.telegram.org/bot${token}/sendMessage`;
         const params = { chat_id: chatId, text: message };
@@ -193,6 +203,7 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
     handleContactForm();
 
     const modalForm = document.querySelector('.modal_form') || null;
+    const modalWrapper = document.querySelector('.modal_wrapper') || null;
     if (modalForm) {
         const modalOpenBtn = document.querySelectorAll('.btn_modalOpen');
         const modalCloseBtn = document.querySelector('.modal_close');
@@ -202,12 +213,14 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
         modalOpenBtnTwo.forEach((button) => {
             button.addEventListener('click', () => {
                 modalForm.classList.add('modal_form-openNarrow');
+                modalWrapper.style.display='block';
             });
         });
 
         modalOpenBtn.forEach((btn) => {
             btn.addEventListener('click', () => {
                 modalForm.classList.add('modal_form-openWide');
+                modalWrapper.style.display='block';
             });
         });
 
