@@ -154,4 +154,12 @@ export default function openHide() {
         });
     }
 
+
+
+    document.querySelector('.active_lang').addEventListener('click', function () {
+        const languageChange = document.querySelector('.language_change');
+        if (languageChange) {
+            languageChange.classList.add('language_changeShow');
+        }
+    });
 }

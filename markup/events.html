@@ -2,15 +2,15 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Stomatologiya</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+    <meta charset="UTF-8">
+    <title>Stomatologiya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
+    <!-- Header -->
+    <header class="header">
     <div class="container">
         <div class="header_flex">
             <div class="header_flex-top">
@@ -252,8 +252,8 @@
     </div>
 </header>
 
-   <!-- Основной контент -->
-   <div class="mobile_menu">
+    <!-- Основной контент -->
+    <div class="mobile_menu">
     <div class="container">
         <div class="mobile_menu-content">
             <div class="mobile_menu-content_top">
@@ -461,61 +461,127 @@
         </div>
     </div>
 </div>
-   <section class="contacts_main">
-    <div class="container">
-        <div class="block_title">
-            <h2 class="pages_title">Наші контакти</h2>
-            <p class="pages_subtitle">Запишись <i>на консультацію</i></p>
-        </div>
-        <div class="block_content">
-            <div class="block_content-list">
-                <a href="#">
-                    <img src="img/phone_contacts.svg" alt="">
-                    <p>+38 (050) 961 05 30
-                </p></a>
-                
-                <a href="#">
-                    <img src="img/mail_contacts.svg" alt="">
-                    <p>shelestkyev@gmail.com</p>
-                </a>
-                <div>
-                    <img src="img/point_contacts.svg" alt="">
-                    <p>Київ, вулиця Січових Стрільців, 42</p>
+    <div class="modal_form">
+    <div class="modal_wrapper">
+        <span class="modal_close"></span>
+        <h4 class="modal_title">Записатися на консультацію</h4>
+        <p class="modal_descr">Ваш ідеальний зубний догляд починається тут — запишіться зараз!</p>
+        <form action="#" class="form form_wide">
+            <input type="hidden" name="page_name" value="Головна">
+            <div class="inputs">
+                <input type="text" name="name" placeholder="Ім'я">
+                <input type="text" name="phone" placeholder="Телефон">
+                <input type="text" name="mail" placeholder="Email">
+                <div class="custom-select">
+                    <div class="custom-select__selected">Оберіть тип обладнення</div>
+                    <ul class="custom-select__options">
+                        <li class="custom-select__option" data-value="Послуга 1">Послуга 1</li>
+                        <li class="custom-select__option" data-value="Послуга 2">Послуга 2</li>
+                        <li class="custom-select__option" data-value="Послуга 3">Послуга 3</li>
+                    </ul>
                 </div>
+                <textarea name="textarea" placeholder="Коментар"></textarea>
             </div>
-            <div class="block_content-form">
-                <form action="#" class="form form_wide">
-                    <div class="inputs">
-                        <input type="text" name="name" placeholder="Ім'я">
-                        <input type="text" name="phone" placeholder="Телефон">
-                        <input type="text" name="mail" placeholder="Email">
-                        <div class="custom-select">
-                            <div class="custom-select__selected">Оберіть тип обладнення</div>
-                            <ul class="custom-select__options">
-                                <li class="custom-select__option">Послуга 1</li>
-                                <li class="custom-select__option">Послуга 2</li>
-                                <li class="custom-select__option">Послуга 3</li>
-                            </ul>
-                        </div>
-                        <textarea name="textarea" placeholder="Коментар"></textarea>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox_modal">
-                        <label class="checkbox_label-modal" data-checkbox-id="checkbox" for="checkbox">Я погоджуюсь з умовами
-                            політики конфідеальності і дозволю обробляти мої персональні дані</label>
-                    </div>
-                    <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
-                </form>
+            <div class="checkbox">
+                <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox_modal">
+                <label class="checkbox_label-modal" data-checkbox-id="checkbox" for="checkbox">Я погоджуюсь з умовами
+                    політики конфідеальності і дозволю обробляти мої персональні дані</label>
             </div>
-        </div>
-        <div class="block_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5080.291494360643!2d30.489755508758687!3d50.45701059893122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce640dbbcdd9%3A0x86e575870dc546f6!2sSichovykh%20Striltsiv%20St%2C%2042%2C%20Kyiv%2C%20Ucrania%2C%2002000!5e0!3m2!1ses!2ses!4v1733123438651!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <button class="btn btn_submitForm btn_modal-two">Записатись на консультацію</button>
+        </form>
+    </div>
+</div>
+    <section class="events_main" style="background: url('img/events_bg.png') center center/cover no-repeat;">
+    <div class="container">
+        <div class="block_flex">
+            <h1 class="events_title">Навчальний центр <i>Shelest Education</i></h1>
+            <p>25 років досвіду успішної практики</p>
         </div>
     </div>
 </section>
-
-  <!-- Footer -->
-  <footer class="footer">
+    <section class="events_items">
+    <div class="container">
+        <div class="items_flex">
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date">12.02.2025</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-end">Завершилась</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-text">Скоро відбудеться</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date">12.02.2025</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-end">Завершилась</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-text">Скоро відбудеться</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date">12.02.2025</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-end">Завершилась</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+            <a class="events_item" href="#" style="background: url('img/events_items.png') center center/cover no-repeat;">
+                <span class="date date-text">Скоро відбудеться</span>
+                <div class="text_block">
+                    <h3 class="events_title">Хірургічні шаблони: Повний цифровий протокол</h3>
+                    <p class="events_descr">Георгій Трифонов</p>
+                </div>
+            </a>
+        </div>
+        <div class="pagination">
+            <a href="#" class="arrow prev">&#8592;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <span>...</span>
+            <a href="#">10</a>
+            <a href="#" class="arrow next">&#8594;</a>
+          </div>
+          
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
     <div class="container">
         <div class="footer_top">
             <a href="#" class="footer_logo">
@@ -669,9 +735,11 @@
     </div>
 </footer>
 
-  <!-- Скрипты -->
-
-  <script type="module" src="js/script.min.js"></script>
+    <!-- Скрипты -->
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script type="module" src="js/script.min.js"></script>
 
 </body>
 

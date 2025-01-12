@@ -246,8 +246,9 @@
 
                 &-bottom {
                     margin-top: 15px;
-                    border-top: 1px solid rgba(255, 255, 255, 0.13);
-                    padding: 25px 0 0;
+                    padding: 25px 0;
+                    border-top: 1px solid rgba(255, 255, 255, .13);
+                    border-bottom: 1px solid rgba(255, 255, 255, .13);
                     display: flex;
                     justify-content: space-between;
                     align-items: center;

@@ -146,30 +146,36 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
                 const popup = document.createElement('div');
                 const message = document.createElement('div');
                 const closeButton = document.createElement('button');
-
+            
                 popup.className = 'thank-you-popup';
                 message.className = 'thank-you-message';
                 closeButton.className = 'thank-you-close';
-
+            
                 message.innerHTML = `
                     <h2>Дякуємо за заявку</h2>
                     <p>Ми з вами зв'яжемося найближчим часом</p>
                 `;
-
+            
                 popup.appendChild(message);
                 popup.appendChild(closeButton);
                 modalPopUp.appendChild(popup);
-
-                closeButton.addEventListener('click', () => {
-                    popup.remove();
-                });
-
-                setTimeout(() => {
+            
+                function closePopup() {
                     popup.remove();
                     modalPopUp.classList.remove('modalActive');
                     modalPopUp.classList.remove('modal_form-openWide');
                     modalPopUp.classList.remove('modal_form-openNarrow');
-                }, 5000);
+                    document.removeEventListener('click', handleOutsideClick);
+                }
+            
+                function handleOutsideClick(event) {
+                    if (!popup.contains(event.target)) {
+                        closePopup();
+                    }
+                }
+            
+                closeButton.addEventListener('click', closePopup);
+                document.addEventListener('click', handleOutsideClick);
             }
 
             createThankYouPopup();
@@ -177,7 +183,7 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
 
     }
 
-    
+
     async function sendMessageToTelegram(token, chatId, message) {
         const url = `https://api.telegram.org/bot${token}/sendMessage`;
         const params = { chat_id: chatId, text: message };
@@ -213,14 +219,14 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
         modalOpenBtnTwo.forEach((button) => {
             button.addEventListener('click', () => {
                 modalForm.classList.add('modal_form-openNarrow');
-                modalWrapper.style.display='block';
+                modalWrapper.style.display = 'block';
             });
         });
 
         modalOpenBtn.forEach((btn) => {
             btn.addEventListener('click', () => {
                 modalForm.classList.add('modal_form-openWide');
-                modalWrapper.style.display='block';
+                modalWrapper.style.display = 'block';
             });
         });
 

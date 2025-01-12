@@ -33,7 +33,7 @@
 @import "pages/equipment/equipment";
 @import "pages/about-us/about-us";
 @import "pages/404/404";
-
+@import "pages/events/events";
 
 body {
     min-height: 100vh;
@@ -141,7 +141,7 @@ a {
     .footer-widgets {
         display: inline-block;
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 20px;
         cursor: pointer;
         z-index: 1500;
@@ -209,7 +209,7 @@ a {
 
     .top_icon {
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         left: 20px;
         opacity: 0;
         overflow: hidden;
@@ -230,6 +230,21 @@ a {
         }
     }
 
+    .breadcrumbs {
+        display: block;
+        margin: 15px 0;
+        font-family: Montserrat;
+        font-size: 12px;
+        color: $colorWhite;
+        text-decoration: none;
+
+        a {
+            font-family: Montserrat;
+            font-size: 12px;
+            color: $colorWhite;
+            text-decoration: underline;
+        }
+    }
 
 
 }
@@ -268,6 +283,11 @@ a {
         }
 
     }
+}
+
+.bingc-phone-button {
+    bottom: 1% !important;
+    right: 20px !important;
 }
 
 @media (min-width: 648px) {
@@ -354,6 +374,16 @@ a {
             overflow: visible;
             height: 48px;
         }
+        .breadcrumbs {
+            font-size: 14px;
+    
+            a {
+                font-size: 14px;
+                &:hover {
+                    color: #E3C7B7;
+                } 
+            }
+        }
     }
 
     .instagram-client {
@@ -369,7 +399,7 @@ a {
 
     }
 
-
+    
 
 }
 
