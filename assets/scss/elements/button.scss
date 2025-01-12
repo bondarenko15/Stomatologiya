@@ -59,8 +59,13 @@
         justify-content: center;
 
     }
+
     &_404 {
         margin: 0;
+    }
+
+    &_conditions {
+        margin: 30px auto -65px;
     }
 }
 
@@ -91,6 +96,7 @@
             padding: 18px 30px;
 
         }
+
         &_404 {
             margin: 0;
             padding: 18px 70px;
@@ -140,8 +146,12 @@
         &_service {
             display: none;
         }
+
         &_flex {
             width: fit-content;
+        }
+        &_conditions {
+            margin: 0 auto -65px;
         }
     }
 }
@@ -150,5 +160,8 @@
 @media (min-width: 1880px) {
     .btn {
         font-size: 18px;
+        &_conditions {
+            margin: 20px auto -65px;
+        }
     }
 }
