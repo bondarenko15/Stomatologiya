@@ -146,19 +146,21 @@ Email: ${contactEmail?.value || 'Не вказано'}\n\r
                 const popup = document.createElement('div');
                 const message = document.createElement('div');
                 const closeButton = document.createElement('button');
-            
+                
                 popup.className = 'thank-you-popup';
+                popup.id = 'thankYouPopupID';
                 message.className = 'thank-you-message';
                 closeButton.className = 'thank-you-close';
-            
+                
                 message.innerHTML = `
                     <h2>Дякуємо за заявку</h2>
                     <p>Ми з вами зв'яжемося найближчим часом</p>
                 `;
-            
+                
                 popup.appendChild(message);
                 popup.appendChild(closeButton);
                 modalPopUp.appendChild(popup);
+                
             
                 function closePopup() {
                     popup.remove();
